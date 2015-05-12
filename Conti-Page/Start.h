@@ -15,11 +15,13 @@
 //Buttons
 @property (strong, nonatomic) IBOutlet UIButton *btnBack;
 @property (strong, nonatomic) IBOutlet UIButton *btnForward;
+@property (strong, nonatomic) IBOutlet UIButton *btnSkipIntro;
 
 
 //Actions
 - (IBAction)btnBackPressed:(id)sender;
 - (IBAction)btnForwardPressed:(id)sender;
+- (IBAction)skipIntroPressed:(id)sender;
 
 @end
 

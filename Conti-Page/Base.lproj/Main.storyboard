@@ -7,7 +7,7 @@
         <!--Start-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="Start" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Start" id="vXZ-lx-hvc" customClass="Start" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -20,6 +20,16 @@
                                 </state>
                                 <connections>
                                     <action selector="btnForwardPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sBr-8v-chd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lt1-og-1Fx" userLabel="btnSkipIntro">
+                                <rect key="frame" x="0.0" y="495" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Saltar Intro">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipIntroPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NTp-as-hzG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Lm-hr-cM2" userLabel="btnBack">
@@ -38,6 +48,7 @@
                     <connections>
                         <outlet property="btnBack" destination="9Lm-hr-cM2" id="Pa6-e4-SYO"/>
                         <outlet property="btnForward" destination="VYb-nC-BCo" id="OYm-0H-veo"/>
+                        <outlet property="btnSkipIntro" destination="Lt1-og-1Fx" id="nF1-Zc-dlE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -82,6 +93,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9A-bp-bj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="923" y="316"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="17h-2g-PRg">
+            <objects>
+                <viewController storyboardIdentifier="Camera" id="66J-Sn-MiS" customClass="Camera" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IYf-9w-yIh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YOl-H9-YwQ" userLabel="btnBackIntro">
+                                <rect key="frame" x="181" y="33" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Volver a Intro">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBackIntroPressed:" destination="66J-Sn-MiS" eventType="touchUpInside" id="zEM-22-5XS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HlP-3X-5TH" userLabel="btnPics">
+                                <rect key="frame" x="0.0" y="95" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fotografías">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPhotosPressed:" destination="66J-Sn-MiS" eventType="touchUpInside" id="vkZ-k5-Vt8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fwq-wJ-gHb" userLabel="img">
+                                <rect key="frame" x="40" y="157" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019609089999998" green="0.54509806630000002" blue="0.96470588450000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="fwq-wJ-gHb" id="tVd-9C-nY3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gT-Mw-o4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="316"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

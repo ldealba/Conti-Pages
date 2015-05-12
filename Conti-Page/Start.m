@@ -10,6 +10,7 @@
 #import "IntroPages.h"
 #import "Declarations.h"
 #import "AppDelegate.h"
+#import "Camera.h"
 
 int             iNumberOfPages  = 3;
 NSUInteger      iIndex          = 0;
@@ -26,6 +27,8 @@ NSUInteger      iIndex          = 0;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"viewDidLoad Start");
+    self.view.tag = 1;
     [self initController];
     [self createPageViews];
 }
@@ -46,45 +49,24 @@ NSUInteger      iIndex          = 0;
 /**********************************************************************************************/
 - (IBAction)btnBackPressed:(id)sender
 {
-    /*NSUInteger index = iIndex;
-    NSLog(@"index = %d", (int)index);
-    if ((index == 0) || (index == NSNotFound))
-    {
-        //do nothing
-    }
-    else
-    {
-        index--;
-        iIndex = index;
-    }
-    */
     iIndex = 0;
     IntroPages *startingViewController  = [self viewControllerAtIndex:iIndex];
     NSArray *viewControllers            = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-
-    
-    //[self viewControllerAtIndex:index];
-    
 }
 //-------------------------------------------------------------------------------
 - (IBAction)btnForwardPressed:(id)sender
 {
-    /*NSUInteger index = iIndex;
-    NSLog(@"index = %d", (int)index);
-    if (index == NSNotFound)
-    {
-        //do nothing
-    }
-    else
-    {
-        index++;
-        iIndex = index;
-    }*/
     iIndex = 2;
     IntroPages *startingViewController  = [self viewControllerAtIndex:iIndex];
     NSArray *viewControllers            = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+}
+//-------------------------------------------------------------------------------
+- (IBAction)skipIntroPressed:(id)sender
+{
+    Camera *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Camera"];
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 /**********************************************************************************************/
 #pragma mark - Page controller functions and delagates
@@ -116,6 +98,7 @@ NSUInteger      iIndex          = 0;
     
     [self.view bringSubviewToFront:self.btnBack];
     [self.view bringSubviewToFront:self.btnForward];
+    [self.view bringSubviewToFront:self.btnSkipIntro];
     
 }
 //-------------------------------------------------------------------------------

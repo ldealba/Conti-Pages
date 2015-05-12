@@ -20,6 +20,10 @@
 		D1F0F11E1B02403100030AE7 /* Chivas.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F11B1B02403100030AE7 /* Chivas.png */; };
 		D1F0F11F1B02403100030AE7 /* LeonesNegros.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F11C1B02403100030AE7 /* LeonesNegros.png */; };
 		D1F0F1221B02417A00030AE7 /* Declarations.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F1211B02417A00030AE7 /* Declarations.m */; };
+		D1F0F1251B02507900030AE7 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F1241B02507900030AE7 /* Camera.m */; };
+		D1F0F1271B02560800030AE7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0F1261B02560800030AE7 /* QuartzCore.framework */; };
+		D1F0F1291B02560E00030AE7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0F1281B02560E00030AE7 /* MobileCoreServices.framework */; };
+		D1F0F12B1B02583A00030AE7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0F12A1B02583A00030AE7 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,11 @@
 		D1F0F11C1B02403100030AE7 /* LeonesNegros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeonesNegros.png; sourceTree = "<group>"; };
 		D1F0F1201B02417A00030AE7 /* Declarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Declarations.h; sourceTree = "<group>"; };
 		D1F0F1211B02417A00030AE7 /* Declarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Declarations.m; sourceTree = "<group>"; };
+		D1F0F1231B02507900030AE7 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		D1F0F1241B02507900030AE7 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		D1F0F1261B02560800030AE7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D1F0F1281B02560E00030AE7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D1F0F12A1B02583A00030AE7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F0F12B1B02583A00030AE7 /* ImageIO.framework in Frameworks */,
+				D1F0F1291B02560E00030AE7 /* MobileCoreServices.framework in Frameworks */,
+				D1F0F1271B02560800030AE7 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +89,9 @@
 		D1F0F0DF1B0236D500030AE7 = {
 			isa = PBXGroup;
 			children = (
+				D1F0F12A1B02583A00030AE7 /* ImageIO.framework */,
+				D1F0F1281B02560E00030AE7 /* MobileCoreServices.framework */,
+				D1F0F1261B02560800030AE7 /* QuartzCore.framework */,
 				D1F0F0EA1B0236D500030AE7 /* Conti-Page */,
 				D1F0F1071B0236D500030AE7 /* Conti-PageTests */,
 				D1F0F0E91B0236D500030AE7 /* Products */,
@@ -151,6 +166,8 @@
 				D1F0F0F61B0236D500030AE7 /* Start.m */,
 				D1F0F1161B0237B600030AE7 /* IntroPages.h */,
 				D1F0F1171B0237B600030AE7 /* IntroPages.m */,
+				D1F0F1231B02507900030AE7 /* Camera.h */,
+				D1F0F1241B02507900030AE7 /* Camera.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F0F1251B02507900030AE7 /* Camera.m in Sources */,
 				D1F0F0F11B0236D500030AE7 /* AppDelegate.m in Sources */,
 				D1F0F0F41B0236D500030AE7 /* Conti_Page.xcdatamodeld in Sources */,
 				D1F0F1221B02417A00030AE7 /* Declarations.m in Sources */,
