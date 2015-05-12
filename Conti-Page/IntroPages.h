@@ -11,5 +11,7 @@
 @interface IntroPages : UIViewController
 
 @property NSUInteger    iPageIndex;
+@property (strong, nonatomic) IBOutlet UILabel *lblTeam;
+@property (strong, nonatomic) IBOutlet UIImageView *imgTeam;
 
 @end

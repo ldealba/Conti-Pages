@@ -7,6 +7,7 @@
 //
 
 #import "IntroPages.h"
+#import "Declarations.h"
 
 @interface IntroPages ()
 
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.lblTeam.text   = aTeamNames[self.iPageIndex];
+    self.imgTeam.image  = [UIImage imageNamed:aTeamImages[self.iPageIndex]];
 }
 
 - (void)didReceiveMemoryWarning {

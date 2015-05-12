@@ -8,8 +8,10 @@
 
 #import "Start.h"
 #import "IntroPages.h"
+#import "Declarations.h"
 
 int     iNumberOfPages = 3;
+
 
 @interface Start ()
 
@@ -22,13 +24,20 @@ int     iNumberOfPages = 3;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self initController];
+    [self createPageViews];
 }
-
+//-------------------------------------------------------------------------------
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+//-------------------------------------------------------------------------------
+- (void)initController
+{
+    aTeamNames  = [NSMutableArray arrayWithObjects: nInitialTeams];
+    aTeamImages = [NSMutableArray arrayWithObjects: nInitialImages];
 }
 /**********************************************************************************************/
 #pragma mark - Page controller functions and delagates
@@ -66,10 +75,14 @@ int     iNumberOfPages = 3;
     }
     
     // Create a new view controller and pass suitable data.
-    IntroPages *pagePoolsTable     = [self.storyboard instantiateViewControllerWithIdentifier:@"IntroPages"];
-    pagePoolsTable.iPageIndex       = index;
+    IntroPages *pageIntro       = [self.storyboard instantiateViewControllerWithIdentifier:@"IntroPages"];
+    pageIntro.iPageIndex        = index;
+    
+    //pageIntro.lblTeam.text      = aTeamImages[index];
+    //pageIntro.imgTeam.image     = [UIImage imageNamed:aTeamImages[index]];
+
     NSLog(@"viewControllerAtIndex index = %d", (int)index);
-    return pagePoolsTable;
+    return pageIntro;
 }
 //-------------------------------------------------------------------------------
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController

@@ -16,6 +16,10 @@
 		D1F0F0FF1B0236D500030AE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F0FD1B0236D500030AE7 /* LaunchScreen.xib */; };
 		D1F0F10B1B0236D500030AE7 /* Conti_PageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F10A1B0236D500030AE7 /* Conti_PageTests.m */; };
 		D1F0F1181B0237B600030AE7 /* IntroPages.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F1171B0237B600030AE7 /* IntroPages.m */; };
+		D1F0F11D1B02403100030AE7 /* Atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F11A1B02403100030AE7 /* Atlas.png */; };
+		D1F0F11E1B02403100030AE7 /* Chivas.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F11B1B02403100030AE7 /* Chivas.png */; };
+		D1F0F11F1B02403100030AE7 /* LeonesNegros.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F11C1B02403100030AE7 /* LeonesNegros.png */; };
+		D1F0F1221B02417A00030AE7 /* Declarations.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F1211B02417A00030AE7 /* Declarations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,11 @@
 		D1F0F10A1B0236D500030AE7 /* Conti_PageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Conti_PageTests.m; sourceTree = "<group>"; };
 		D1F0F1161B0237B600030AE7 /* IntroPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroPages.h; sourceTree = "<group>"; };
 		D1F0F1171B0237B600030AE7 /* IntroPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroPages.m; sourceTree = "<group>"; };
+		D1F0F11A1B02403100030AE7 /* Atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Atlas.png; sourceTree = "<group>"; };
+		D1F0F11B1B02403100030AE7 /* Chivas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chivas.png; sourceTree = "<group>"; };
+		D1F0F11C1B02403100030AE7 /* LeonesNegros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeonesNegros.png; sourceTree = "<group>"; };
+		D1F0F1201B02417A00030AE7 /* Declarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Declarations.h; sourceTree = "<group>"; };
+		D1F0F1211B02417A00030AE7 /* Declarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Declarations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +101,7 @@
 				D1F0F0FB1B0236D500030AE7 /* Images.xcassets */,
 				D1F0F0FD1B0236D500030AE7 /* LaunchScreen.xib */,
 				D1F0F0F21B0236D500030AE7 /* Conti_Page.xcdatamodeld */,
+				D1F0F1191B02403100030AE7 /* imgs */,
 				D1F0F0EB1B0236D500030AE7 /* Supporting Files */,
 			);
 			path = "Conti-Page";
@@ -126,6 +136,8 @@
 		D1F0F1141B0236E600030AE7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D1F0F1201B02417A00030AE7 /* Declarations.h */,
+				D1F0F1211B02417A00030AE7 /* Declarations.m */,
 				D1F0F0EF1B0236D500030AE7 /* AppDelegate.h */,
 				D1F0F0F01B0236D500030AE7 /* AppDelegate.m */,
 			);
@@ -141,6 +153,16 @@
 				D1F0F1171B0237B600030AE7 /* IntroPages.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D1F0F1191B02403100030AE7 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				D1F0F11A1B02403100030AE7 /* Atlas.png */,
+				D1F0F11B1B02403100030AE7 /* Chivas.png */,
+				D1F0F11C1B02403100030AE7 /* LeonesNegros.png */,
+			);
+			path = imgs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +246,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1F0F0FA1B0236D500030AE7 /* Main.storyboard in Resources */,
+				D1F0F11D1B02403100030AE7 /* Atlas.png in Resources */,
 				D1F0F0FF1B0236D500030AE7 /* LaunchScreen.xib in Resources */,
+				D1F0F11F1B02403100030AE7 /* LeonesNegros.png in Resources */,
+				D1F0F11E1B02403100030AE7 /* Chivas.png in Resources */,
 				D1F0F0FC1B0236D500030AE7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +270,7 @@
 			files = (
 				D1F0F0F11B0236D500030AE7 /* AppDelegate.m in Sources */,
 				D1F0F0F41B0236D500030AE7 /* Conti_Page.xcdatamodeld in Sources */,
+				D1F0F1221B02417A00030AE7 /* Declarations.m in Sources */,
 				D1F0F1181B0237B600030AE7 /* IntroPages.m in Sources */,
 				D1F0F0F71B0236D500030AE7 /* Start.m in Sources */,
 				D1F0F0EE1B0236D500030AE7 /* main.m in Sources */,
