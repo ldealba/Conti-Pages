@@ -10,11 +10,12 @@
 		D1F0F0EE1B0236D500030AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F0ED1B0236D500030AE7 /* main.m */; };
 		D1F0F0F11B0236D500030AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F0F01B0236D500030AE7 /* AppDelegate.m */; };
 		D1F0F0F41B0236D500030AE7 /* Conti_Page.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F0F21B0236D500030AE7 /* Conti_Page.xcdatamodeld */; };
-		D1F0F0F71B0236D500030AE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F0F61B0236D500030AE7 /* ViewController.m */; };
+		D1F0F0F71B0236D500030AE7 /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F0F61B0236D500030AE7 /* Start.m */; };
 		D1F0F0FA1B0236D500030AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F0F81B0236D500030AE7 /* Main.storyboard */; };
 		D1F0F0FC1B0236D500030AE7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F0FB1B0236D500030AE7 /* Images.xcassets */; };
 		D1F0F0FF1B0236D500030AE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F0F0FD1B0236D500030AE7 /* LaunchScreen.xib */; };
 		D1F0F10B1B0236D500030AE7 /* Conti_PageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F10A1B0236D500030AE7 /* Conti_PageTests.m */; };
+		D1F0F1181B0237B600030AE7 /* IntroPages.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0F1171B0237B600030AE7 /* IntroPages.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,16 @@
 		D1F0F0EF1B0236D500030AE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1F0F0F01B0236D500030AE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D1F0F0F31B0236D500030AE7 /* Conti_Page.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Conti_Page.xcdatamodel; sourceTree = "<group>"; };
-		D1F0F0F51B0236D500030AE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D1F0F0F61B0236D500030AE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D1F0F0F51B0236D500030AE7 /* Start.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Start.h; sourceTree = "<group>"; };
+		D1F0F0F61B0236D500030AE7 /* Start.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Start.m; sourceTree = "<group>"; };
 		D1F0F0F91B0236D500030AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1F0F0FB1B0236D500030AE7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D1F0F0FE1B0236D500030AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D1F0F1041B0236D500030AE7 /* Conti-PageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Conti-PageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F0F1091B0236D500030AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1F0F10A1B0236D500030AE7 /* Conti_PageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Conti_PageTests.m; sourceTree = "<group>"; };
+		D1F0F1161B0237B600030AE7 /* IntroPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroPages.h; sourceTree = "<group>"; };
+		D1F0F1171B0237B600030AE7 /* IntroPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroPages.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +86,8 @@
 		D1F0F0EA1B0236D500030AE7 /* Conti-Page */ = {
 			isa = PBXGroup;
 			children = (
-				D1F0F0EF1B0236D500030AE7 /* AppDelegate.h */,
-				D1F0F0F01B0236D500030AE7 /* AppDelegate.m */,
-				D1F0F0F51B0236D500030AE7 /* ViewController.h */,
-				D1F0F0F61B0236D500030AE7 /* ViewController.m */,
+				D1F0F1141B0236E600030AE7 /* Main */,
+				D1F0F1151B0236F000030AE7 /* Controllers */,
 				D1F0F0F81B0236D500030AE7 /* Main.storyboard */,
 				D1F0F0FB1B0236D500030AE7 /* Images.xcassets */,
 				D1F0F0FD1B0236D500030AE7 /* LaunchScreen.xib */,
@@ -120,6 +121,26 @@
 				D1F0F1091B0236D500030AE7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1F0F1141B0236E600030AE7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D1F0F0EF1B0236D500030AE7 /* AppDelegate.h */,
+				D1F0F0F01B0236D500030AE7 /* AppDelegate.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D1F0F1151B0236F000030AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1F0F0F51B0236D500030AE7 /* Start.h */,
+				D1F0F0F61B0236D500030AE7 /* Start.m */,
+				D1F0F1161B0237B600030AE7 /* IntroPages.h */,
+				D1F0F1171B0237B600030AE7 /* IntroPages.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +245,8 @@
 			files = (
 				D1F0F0F11B0236D500030AE7 /* AppDelegate.m in Sources */,
 				D1F0F0F41B0236D500030AE7 /* Conti_Page.xcdatamodeld in Sources */,
-				D1F0F0F71B0236D500030AE7 /* ViewController.m in Sources */,
+				D1F0F1181B0237B600030AE7 /* IntroPages.m in Sources */,
+				D1F0F0F71B0236D500030AE7 /* Start.m in Sources */,
 				D1F0F0EE1B0236D500030AE7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

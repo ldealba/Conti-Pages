@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  IntroPages.h
 //  Conti-Page
 //
 //  Created by Walter Gonzalez Domenzain on 12/05/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface IntroPages : UIViewController
 
 @end
-
