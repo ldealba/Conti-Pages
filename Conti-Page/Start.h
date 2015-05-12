@@ -12,5 +12,14 @@
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
+//Buttons
+@property (strong, nonatomic) IBOutlet UIButton *btnBack;
+@property (strong, nonatomic) IBOutlet UIButton *btnForward;
+
+
+//Actions
+- (IBAction)btnBackPressed:(id)sender;
+- (IBAction)btnForwardPressed:(id)sender;
+
 @end
 

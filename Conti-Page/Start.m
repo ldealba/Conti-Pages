@@ -9,8 +9,10 @@
 #import "Start.h"
 #import "IntroPages.h"
 #import "Declarations.h"
+#import "AppDelegate.h"
 
-int     iNumberOfPages = 3;
+int             iNumberOfPages  = 3;
+NSUInteger      iIndex          = 0;
 
 
 @interface Start ()
@@ -40,6 +42,51 @@ int     iNumberOfPages = 3;
     aTeamImages = [NSMutableArray arrayWithObjects: nInitialImages];
 }
 /**********************************************************************************************/
+#pragma mark - Buttons functions
+/**********************************************************************************************/
+- (IBAction)btnBackPressed:(id)sender
+{
+    /*NSUInteger index = iIndex;
+    NSLog(@"index = %d", (int)index);
+    if ((index == 0) || (index == NSNotFound))
+    {
+        //do nothing
+    }
+    else
+    {
+        index--;
+        iIndex = index;
+    }
+    */
+    iIndex = 0;
+    IntroPages *startingViewController  = [self viewControllerAtIndex:iIndex];
+    NSArray *viewControllers            = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+
+    
+    //[self viewControllerAtIndex:index];
+    
+}
+//-------------------------------------------------------------------------------
+- (IBAction)btnForwardPressed:(id)sender
+{
+    /*NSUInteger index = iIndex;
+    NSLog(@"index = %d", (int)index);
+    if (index == NSNotFound)
+    {
+        //do nothing
+    }
+    else
+    {
+        index++;
+        iIndex = index;
+    }*/
+    iIndex = 2;
+    IntroPages *startingViewController  = [self viewControllerAtIndex:iIndex];
+    NSArray *viewControllers            = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+}
+/**********************************************************************************************/
 #pragma mark - Page controller functions and delagates
 /**********************************************************************************************/
 - (void)createPageViews
@@ -66,6 +113,10 @@ int     iNumberOfPages = 3;
         }
     }
     thisControl.hidden = true;
+    
+    [self.view bringSubviewToFront:self.btnBack];
+    [self.view bringSubviewToFront:self.btnForward];
+    
 }
 //-------------------------------------------------------------------------------
 - (IntroPages *)viewControllerAtIndex:(NSUInteger)index
@@ -78,9 +129,6 @@ int     iNumberOfPages = 3;
     IntroPages *pageIntro       = [self.storyboard instantiateViewControllerWithIdentifier:@"IntroPages"];
     pageIntro.iPageIndex        = index;
     
-    //pageIntro.lblTeam.text      = aTeamImages[index];
-    //pageIntro.imgTeam.image     = [UIImage imageNamed:aTeamImages[index]];
-
     NSLog(@"viewControllerAtIndex index = %d", (int)index);
     return pageIntro;
 }
@@ -95,6 +143,7 @@ int     iNumberOfPages = 3;
     }
     
     index--;
+    iIndex = index;
     return [self viewControllerAtIndex:index];
 }
 //-------------------------------------------------------------------------------
@@ -107,6 +156,7 @@ int     iNumberOfPages = 3;
     }
 
     index++;
+    iIndex = index;
     return [self viewControllerAtIndex:index];
 }
 //-------------------------------------------------------------------------------
@@ -120,4 +170,5 @@ int     iNumberOfPages = 3;
     NSLog(@"presentationIndexForPageViewController");
     return 0;
 }
+
 @end
